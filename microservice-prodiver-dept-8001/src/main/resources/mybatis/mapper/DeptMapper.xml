@@ -9,20 +9,20 @@
   <sql id="Base_Column_List">
     deptno, dname, db_source
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from dept
-    where deptno = #{deptno,jdbcType=INTEGER}
+    where deptno = #{deptno,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from dept
-    where deptno = #{deptno,jdbcType=INTEGER}
+    where deptno = #{deptno,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.kevin.springcloud.entity.Dept">
     insert into dept (deptno, dname, db_source
       )
-    values (#{deptno,jdbcType=INTEGER}, #{dname,jdbcType=VARCHAR}, #{db_source,jdbcType=VARCHAR}
+    values (#{deptno,jdbcType=BIGINT}, #{dname,jdbcType=VARCHAR}, #{db_source,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.kevin.springcloud.entity.Dept">
@@ -40,7 +40,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="deptno != null">
-        #{deptno,jdbcType=INTEGER},
+        #{deptno,jdbcType=BIGINT},
       </if>
       <if test="dname != null">
         #{dname,jdbcType=VARCHAR},
@@ -60,12 +60,20 @@
         db_source = #{db_source,jdbcType=VARCHAR},
       </if>
     </set>
-    where deptno = #{deptno,jdbcType=INTEGER}
+    where deptno = #{deptno,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.kevin.springcloud.entity.Dept">
     update dept
     set dname = #{dname,jdbcType=VARCHAR},
       db_source = #{db_source,jdbcType=VARCHAR}
-    where deptno = #{deptno,jdbcType=INTEGER}
+    where deptno = #{deptno,jdbcType=BIGINT}
   </update>
+
+  <insert id="add" parameterType="dept">
+    insert into dept(dname,db_source) values(#{dname},DATABASE())
+  </insert>
+
+  <select id="findAll" resultType="dept">
+    select * from dept;
+  </select>
 </mapper>

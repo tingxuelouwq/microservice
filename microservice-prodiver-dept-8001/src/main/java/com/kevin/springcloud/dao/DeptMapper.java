@@ -3,17 +3,23 @@ package com.kevin.springcloud.dao;
 import com.kevin.springcloud.entity.Dept;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface DeptMapper {
-    int deleteByPrimaryKey(Integer deptno);
+    int deleteByPrimaryKey(Long deptno);
 
     int insert(Dept record);
 
     int insertSelective(Dept record);
 
-    Dept selectByPrimaryKey(Integer deptno);
+    Dept selectByPrimaryKey(Long deptno);
 
     int updateByPrimaryKeySelective(Dept record);
 
     int updateByPrimaryKey(Dept record);
+
+    int add(Dept dept);
+
+    List<Dept> findAll();
 }
