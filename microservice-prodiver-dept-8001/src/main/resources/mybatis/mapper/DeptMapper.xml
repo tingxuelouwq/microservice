@@ -70,7 +70,7 @@
   </update>
 
   <insert id="add" parameterType="dept">
-    insert into dept(dname,db_source) values(#{dname},DATABASE())
+    insert into dept(dname,db_source) values(#{dname},DATABASE());
   </insert>
 
   <select id="findAll" resultType="dept">

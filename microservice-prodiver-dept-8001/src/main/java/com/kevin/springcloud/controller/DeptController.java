@@ -23,7 +23,7 @@ public class DeptController {
     private DeptService deptService;
 
     @PostMapping("/add")
-    public int add(Dept dept) {
+    public int add(@RequestBody Dept dept) {
         return deptService.add(dept);
     }
 
