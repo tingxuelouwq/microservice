@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-prodiver-dept-8001</artifactId>
+    <artifactId>microservice-provider-dept-8001</artifactId>
 
     <dependencies>
         <dependency>
