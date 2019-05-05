@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  * 类名: Dept<br/>
- * 包名：com.kevin.com.kevin.springcloud<br/>
+ * 包名：com.kevin.springcloud<br/>
  * 作者：kevin<br/>
  * 时间：2019/3/14 9:23<br/>
  * 版本：1.0<br/>
