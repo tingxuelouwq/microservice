@@ -2,6 +2,7 @@ package com.kevin.springcloud.controller;
 
 import com.kevin.springcloud.entity.Dept;
 import com.kevin.springcloud.service.DeptService;
+import com.netflix.discovery.DiscoveryManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -50,5 +51,10 @@ public class DeptController {
             System.out.println(srv.getServiceId() + "\t" + srv.getHost() + "\t" + srv.getPort() + "\t" + srv.getUri());
         }
         return this.client;
+    }
+
+    @GetMapping("/offline")
+    public void offline() {
+        DiscoveryManager.getInstance().shutdownComponent();
     }
 }
