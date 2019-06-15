@@ -1,0 +1,43 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.kevin.springcloud.entity
+
+spring:
+  application:
+    name: microservice-dept
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/clouddb01?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+    username: root
+    password: tttx
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    #一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 30000
+    #有两个含义：1) Destroy线程会检测连接的间隔时间；2) testWhileIdle的判断依据
+    timeBetweenEvictionRunsMillis: 60000
+    #建议配置为true，不影响性能，并且保证安全性。如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效
+    testWhileIdle: true
+    #用来检测连接是否有效的sql，要求是一个查询语句。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会其作用
+    validationQuery: SELECT 1
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservice-provider-dept-hystrix-8001
+    prefer-ip-address: true  #访问路径可以显示IP地址
+
+info:
+  app.name: kevin-microservice
+  company.name: www.kevinq.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
