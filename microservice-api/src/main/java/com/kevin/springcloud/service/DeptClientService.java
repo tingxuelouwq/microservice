@@ -15,8 +15,8 @@ import java.util.List;
  * @描述：<br/>
  */
 @FeignClient(value = "MICROSERVICE-DEPT",
-//        fallbackFactory = DeptClientServiceFallbackFactory.class)
-        fallback = DeptClientServiceFallback.class)
+        fallbackFactory = DeptClientServiceFallbackFactory.class)
+//        fallback = DeptClientServiceFallback.class)
 public interface DeptClientService {
 
     @PostMapping("/dept/add")

@@ -41,3 +41,9 @@ info:
   company.name: www.kevinq.com
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
