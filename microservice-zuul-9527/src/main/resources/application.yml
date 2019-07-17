@@ -20,4 +20,9 @@ info:
   build.version: ${project.version}
 
 zuul:
-  prefix:
+  routes:
+    mydept:
+      serviceId: microservice-dept
+      path: /mydept/**
+  ignored-services: microservice-dept
+  prefix: /kevin
