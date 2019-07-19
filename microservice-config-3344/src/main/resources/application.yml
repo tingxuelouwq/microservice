@@ -9,6 +9,3 @@ spring:
       server:
         git:
           uri: git@github.com:tingxuelouwq/microservice-config.git
-          search-paths:
-      label: master
-
