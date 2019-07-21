@@ -1,7 +1,9 @@
 spring:
+  application:
+    name: microservice-config-client
   cloud:
     config:
-      name: microservice-config-client
-      label: master
-      profile: dev
       uri: http://myconfig.com:3344
+      profile: dev
+      label: master
+
