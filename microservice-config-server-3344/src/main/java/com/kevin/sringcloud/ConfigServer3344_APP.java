@@ -3,6 +3,7 @@ package com.kevin.sringcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @类名: Config3344_APP<br />
@@ -14,6 +15,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  */
 @SpringBootApplication
 @EnableConfigServer
+@EnableEurekaClient
 public class ConfigServer3344_APP {
     public static void main(String[] args) {
         SpringApplication.run(ConfigServer3344_APP.class, args);

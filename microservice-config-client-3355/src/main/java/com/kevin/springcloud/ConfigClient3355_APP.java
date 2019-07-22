@@ -2,6 +2,7 @@ package com.kevin.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @类名: ConfigClient3355_APP<br />
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @描述：<br/>
  */
 @SpringBootApplication
+@EnableEurekaClient
 public class ConfigClient3355_APP {
     public static void main(String[] args) {
         SpringApplication.run(ConfigClient3355_APP.class, args);
