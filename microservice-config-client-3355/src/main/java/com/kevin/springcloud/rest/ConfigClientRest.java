@@ -15,21 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientRest {
 
-    @Value("${server.port}")
-    private String port;
-
-    @Value("${spring.application.name}")
-    private String applicationName;
-
-    @Value("${eureka.client.service-url.defaultZone}")
-    private String eurekaServers;
-
+    @Value("${profile}")
+    private String profile;
     @RequestMapping("/config")
     public String getConfig() {
-        String config = "applicationName: " + applicationName +
-                "\neurekaServers: " + eurekaServers +
-                "\nport: " + port;
-        System.out.println("******config:\n" + config);
+        String config = "profile: " + profile;
+        System.out.println("******" + config);
         return config;
     }
 }
