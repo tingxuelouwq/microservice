@@ -22,6 +22,10 @@
         <module>microservice-zuul-9527</module>
         <module>microservice-config-server-3344</module>
         <module>microservice-config-client-3355</module>
+        <module>microservice-config-bus-server-9005</module>
+        <module>microservice-config-bus-client-9006</module>
+        <module>microservice-config-bus-client-9007</module>
+        <module>microservice-config-bus-client-9007</module>
     </modules>
     <packaging>pom</packaging>
 

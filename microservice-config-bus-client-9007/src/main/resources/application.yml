@@ -1,0 +1,17 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: microservice-config-bus-client-2
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: kevin
+      password: tttx
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

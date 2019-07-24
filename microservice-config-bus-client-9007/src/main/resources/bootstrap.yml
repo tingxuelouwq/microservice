@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    config:
+      profile: dev
+      label: master
+      name: config-service
+      discovery:
+        enabled: true
+        service-id: microservice-config-bus-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservice-config-bus-client-9007
+    prefer-ip-address: true
+
+info:
+  app.name: kevin-microservice
+  company.name: www.kevinq.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
