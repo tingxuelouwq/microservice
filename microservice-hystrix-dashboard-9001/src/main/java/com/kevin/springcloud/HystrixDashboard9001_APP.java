@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
- * @类名: DeptConsumer_DashBoard_App<br />
+ * @类名: HystrixDashboard9001_APP<br />
  * @包名：com.kevin.springcloud<br/>
  * @作者：kevin<br/>
  * @时间：2019/6/20 23:06<br/>
@@ -16,8 +16,8 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrixDashboard
-public class DeptConsumer_DashBoard_App {
+public class HystrixDashboard9001_APP {
     public static void main(String[] args) {
-        SpringApplication.run(DeptConsumer_DashBoard_App.class, args);
+        SpringApplication.run(HystrixDashboard9001_APP.class, args);
     }
 }

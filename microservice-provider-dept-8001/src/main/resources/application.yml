@@ -26,6 +26,11 @@ spring:
     testWhileIdle: true
     #用来检测连接是否有效的sql，要求是一个查询语句。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会其作用
     validationQuery: SELECT 1
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
 
 eureka:
   client: #客户端注册进eureka服务列表内

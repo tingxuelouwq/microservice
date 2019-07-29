@@ -18,7 +18,7 @@
         <module>microservice-provider-dept-8003</module>
         <module>microservice-consumer-dept-feign</module>
         <module>microservice-provider-dept-hystrix-8001</module>
-        <module>microservice-consumer-hystrix-dashboard</module>
+        <module>microservice-hystrix-dashboard-9001</module>
         <module>microservice-zuul-9527</module>
         <module>microservice-config-server-3344</module>
         <module>microservice-config-client-3355</module>
@@ -26,7 +26,8 @@
         <module>microservice-config-bus-client-9006</module>
         <module>microservice-config-bus-client-9007</module>
         <module>microservice-config-bus-client-9007</module>
-        <module>microservice-zipkin-9411</module>
+        <module>microservice-provider-dept-hystrix-8002</module>
+        <module>microservice-hystrix-turbine</module>
     </modules>
     <packaging>pom</packaging>
 
