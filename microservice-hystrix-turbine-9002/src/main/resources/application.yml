@@ -20,7 +20,6 @@ info:
   build.version: ${project.version}
 
 turbine:
-  aggregator:
-    cluster-config: default
-  app-config: microservice-dept,microservice-dept-2
+  app-config: microservice-dept
   cluster-name-expression: new String("default")
+  combine-host-port: true
